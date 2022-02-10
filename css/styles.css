@@ -4,6 +4,9 @@
   --theme2: #1c1a19;
   --theme3: #ff6b00;
   --light-text-theme: #e5e5e5;
+  --white-theme: #fff;
+  --offwhite-theme: #fff5e1;
+  --offwhite-theme2: #dbd8d7;
 }
 
 body {
@@ -16,17 +19,22 @@ body {
 .logo {
   font-family: 'Roboto';
   text-decoration: none;
-  color: #fff;
+  color: var(--white-theme);
 }
 
 .top-nav {
   display: flex;
-  padding: 2.5% 5%;
+  padding: 2.5% 30px 2.5% 24px;
   justify-content: space-between;
+  align-items: center;
   flex: 1;
   font-size: 15px;
   background-color: var(--theme1);
-  color: var(--light-text-theme);
+  color: var(--white-theme);
+}
+
+.fa-bars {
+  cursor: pointer;
 }
 
 .welcome {
@@ -36,15 +44,23 @@ body {
   background-color: var(--theme2);
   background-image: url("../img/illustration-header-mobile.png");
   background-repeat: no-repeat;
-  background-position: 100% 350%;
-  color: var(--light-text-theme);
-  padding: 15% 5%;
+  background-position: 100% 115%;
+  color: var(--white-theme);
+  padding: 120px 5%;
   min-width: 375px;
   flex: 0 0 auto;
 }
 
 .welcome p {
   max-width: 300px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.who-am-i {
+  color: var(--offwhite-theme);
+  font-family: 'Roboto';
+  font-size: 24px;
 }
 
 .welcome h1,
@@ -54,18 +70,36 @@ body {
 
 .greeting {
   color: var(--theme3);
+  font-weight: 400;
   font-size: 56px;
+  font-family: 'Crete Round';
+  margin-bottom: 12px;
 }
 
 .contact-bar {
+  display: flex;
   font-size: 20px;
 }
 
+.contact-bar ul {
+  display: flex;
+  flex: 0 0 auto;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 200px;
+}
+
+.contact-bar ul li {
+  margin: 10px;
+}
+
+.fa-github,
 .fa-facebook,
 .fa-twitter,
 .fa-linkedin,
 .fa-instagram {
-  color: white;
+  color: var(--offwhite-theme2);
 }
 
 .fa {
