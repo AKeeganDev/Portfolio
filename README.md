@@ -1,6 +1,13 @@
 # Portfolio
 
-> This project is for practicing my skills with Flexbox and other various HTML/CSS techniques
+> This project is for practicing my skills with Flexbox and other various HTML/CSS techniques.
+
+specific tasks include:
+
+-Utilizing Flexbox to organize and structure/style HTML elements
+-Setting backgrounds
+-Using image files
+-Using custom fonts
 
 
 ## Built With
