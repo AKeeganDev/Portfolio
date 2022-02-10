@@ -4,10 +4,7 @@
 
 specific tasks include:
 
--Utilizing Flexbox to organize and structure/style HTML elements
--Setting backgrounds
--Using image files
--Using custom fonts
+-Utilizing Flexbox to organize and structure/style HTML elements, setting backgrounds, using image files, using custom fonts
 
 
 ## Built With
