@@ -1,0 +1,67 @@
+:root {
+  --primary-bg: #fff;
+  --theme1: #3c3a39;
+  --theme2: #1c1a19;
+  --theme3: #ff6b00;
+  --light-text-theme: #e5e5e5;
+}
+
+body {
+  background-color: var(--primary-bg);
+  justify-content: center;
+  margin: 0;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.top-nav {
+  display: flex;
+  padding: 2.5% 5%;
+  justify-content: space-between;
+  flex: 1;
+  font-size: 15px;
+  background-color: var(--theme1);
+  color: var(--light-text-theme);
+}
+
+.welcome {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  background-color: var(--theme2);
+  background-image: url("../img/illustration-header-mobile.png");
+  background-repeat: no-repeat;
+  background-position: 100% 350%;
+  color: var(--light-text-theme);
+  padding: 15% 5%;
+  min-width: 375px;
+  flex: 0 0 auto;
+}
+
+.welcome p {
+  max-width: 300px;
+}
+
+.welcome h1,
+.welcome h3 {
+  margin: 0;
+}
+
+.greeting {
+  color: var(--theme3);
+  font-size: 56px;
+}
+
+.contact-bar {
+  font-size: 20px;
+}
+
+.fa-facebook,
+.fa-twitter,
+.fa-linkedin,
+.fa-instagram {
+  color: white;
+}
+
+.fa {
+  text-decoration: none;
+}
