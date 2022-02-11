@@ -93,7 +93,7 @@ body {
 .tags li {
   font-family: 'Inter', sans-serif;
   list-style: none;
-  border: 1px solid #091e42;
+  border: 1px solid #8993a4;
   font-size: 15px;
   margin: 0 12px 0 0;
   padding: 10px 10px 10px 12px;
@@ -137,7 +137,7 @@ body {
   margin-bottom: 80px;
 }
 
-.heading h1{
+.heading h1 {
   font-size: 38px;
   font-weight: 400;
   margin-bottom: 50px;
@@ -161,9 +161,9 @@ body {
 }
 
 .featured-img {
-  display: flex;
-  max-width: 100%;
-  flex: 1;
+  width: 321.688px;
+  height: 233.141px;
+  background-image: url(../img/featured-img.png);
 }
 
 .tags {
@@ -258,6 +258,11 @@ body {
   background-position: 100% 100%;
 }
 
+.personal .greeting {
+  font-size: 70px;
+  margin-bottom: 30px;
+}
+
 .about-myself .personal {
   display: flex;
   flex-direction: column;
@@ -268,6 +273,7 @@ body {
 }
 
 .resume {
+  margin-top: 10px;
   align-self: flex-start;
 }
 
@@ -300,12 +306,16 @@ body {
   padding: 0;
 }
 
+.headings ul {
+  margin-right: 0;
+}
+
 .language,
 .frameworks,
 .skills-list {
   font-family: 'InaiMathi', sans-serif;
   font-size: 32px;
-  padding: 120px 90px 0 70px;
+  padding: 120px 90px 0 45px;
   margin-bottom: 44px;
 }
 
