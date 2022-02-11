@@ -46,9 +46,7 @@ body {
   background-repeat: no-repeat;
   background-position: 100% 115%;
   color: var(--white-theme);
-  padding: 120px 5%;
-  min-width: 375px;
-  flex: 0 0 auto;
+  padding: 120px 24px;
 }
 
 .welcome p {
@@ -66,6 +64,7 @@ body {
 .welcome h1,
 .welcome h3 {
   margin: 0;
+  padding: 0;
 }
 
 .greeting {
@@ -90,6 +89,15 @@ body {
   max-width: 200px;
 }
 
+.tags li {
+  font-family: 'Inter', sans-serif;
+  list-style: none;
+  border: 1px solid #8993a4;
+  font-size: 15px;
+  margin: 0 12px 0 0;
+  padding: 10px 10px 10px 12px;
+}
+
 .contact-bar ul li {
   margin: 10px;
 }
@@ -104,4 +112,227 @@ body {
 
 .fa {
   text-decoration: none;
+}
+
+.recent-works {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 120px 24px;
+}
+
+.recent-works > * {
+  display: flex;
+}
+
+.heading,
+.headings {
+  font-family: 'Crete Round', sans-serif;
+  font-size: 25px;
+  font-weight: 100;
+  text-align: center;
+  border-bottom: 1px solid #212121;
+  margin-bottom: 80px;
+}
+
+.heading h1 {
+  font-size: 38px;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+
+.featured-img-space {
+  margin-bottom: 12px;
+}
+
+.featured-img-space h3 {
+  font-size: 25px;
+  font-family: 'Crete Round', sans-serif;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.featured-img-space p {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.featured-img {
+  width: 321.688px;
+  height: 233.141px;
+  background-image: url(../img/featured-img.png);
+}
+
+.tags {
+  margin-bottom: 12px;
+}
+
+.tags ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.see-project {
+  font-size: 17px;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  color: var(--white-theme);
+  background-color: var(--theme3);
+  border: none;
+  padding: 12px;
+}
+
+.see-project:hover {
+  color: #ff6b00;
+  background-color: var(--offwhite-theme);
+}
+
+.see-project:active {
+  color: var(--offwhite-theme);
+  background-color: #e05304;
+}
+
+.see-project:disabled {
+  color: #5b5957;
+  background-color: #f4f1f0;
+}
+
+.card-button {
+  align-self: stretch;
+}
+
+.card-container {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+  row-gap: 24px;
+  margin-top: 10px;
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  background: url(../img/card-background.png);
+  width: 327px;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 16px 0 16px;
+}
+
+.project-title {
+  font-family: 'Crete Round', sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--white-theme);
+  margin-top: 85px;
+  margin-bottom: 0;
+}
+
+.project-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--white-theme);
+  margin-top: 7px;
+}
+
+.tags .card-tag {
+  background: rgba(255, 255, 255, 0.24);
+  border: none;
+  color: var(--white-theme);
+}
+
+.personal {
+  background-color: var(--theme2);
+  background-image: url("../img/illustration-about-me-mobile.png");
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
+
+.personal .greeting {
+  font-size: 70px;
+  margin-bottom: 30px;
+}
+
+.about-myself .personal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 120px 24px 221px 24px;
+  color: var(--offwhite-theme2);
+  line-height: 24px;
+}
+
+.resume {
+  margin-top: 10px;
+  align-self: flex-start;
+}
+
+.margin {
+  padding: 0 24px;
+  background-color: var(--theme2);
+}
+
+.divider {
+  margin: 0 24px;
+  max-width: 327px;
+  border-bottom: 1px solid var(--offwhite-theme);
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--theme2);
+}
+
+.skills ul {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  color: var(--white-theme);
+  font-family: 'InaiMathi', sans-serif;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.headings ul {
+  margin-right: 0;
+}
+
+.language,
+.frameworks,
+.skills-list {
+  font-family: 'InaiMathi', sans-serif;
+  font-size: 32px;
+  padding: 120px 90px 0 45px;
+  margin-bottom: 44px;
+}
+
+.lang {
+  font-size: 22px;
+  margin-bottom: 32px;
+}
+
+.orange {
+  color: #ff6b00;
+  margin-right: 12px;
+  font-size: 40px;
+}
+
+.frameworks,
+.skills-list {
+  padding-top: 40px;
+}
+
+.skills-list {
+  padding-left: 50px;
 }
