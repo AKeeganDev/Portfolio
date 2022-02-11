@@ -47,7 +47,7 @@ body {
   background-position: 100% 115%;
   color: var(--white-theme);
   padding: 120px 5%;
-  min-width: 375px;
+  max-width: 375px;
   flex: 0 0 auto;
 }
 
@@ -111,6 +111,11 @@ body {
   flex-direction: column;
   justify-content: center;
   padding: 120px 24px;
+  max-width: 375px;
+}
+
+.recent-works > * {
+  display: flex;
 }
 
 .heading {
@@ -119,4 +124,24 @@ body {
   font-weight: 100;
   text-align: center;
   border-bottom: 1px solid #212121;
+  margin-bottom: 80px;
+}
+
+.featured-img-space h3 {
+  font-size: 25px;
+  font-family: 'Crete Round', sans-serif;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.featured-img-space p {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.featured-img {
+  display: flex;
+  max-width: 100%;
+  flex: 1;
 }
