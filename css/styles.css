@@ -46,9 +46,7 @@ body {
   background-repeat: no-repeat;
   background-position: 100% 115%;
   color: var(--white-theme);
-  padding: 120px 5%;
-  max-width: 375px;
-  flex: 0 0 auto;
+  padding: 120px 24px;
 }
 
 .welcome p {
@@ -66,6 +64,7 @@ body {
 .welcome h1,
 .welcome h3 {
   margin: 0;
+  padding: 0;
 }
 
 .greeting {
@@ -120,7 +119,6 @@ body {
   flex-direction: column;
   justify-content: center;
   padding: 120px 24px;
-  max-width: 375px;
 }
 
 .recent-works > * {
