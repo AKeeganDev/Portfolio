@@ -90,6 +90,15 @@ body {
   max-width: 200px;
 }
 
+.tags li {
+  font-family: 'Inter', sans-serif;
+  list-style: none;
+  border: 1px solid #091e42;
+  font-size: 15px;
+  margin: 0 12px 0 0;
+  padding: 10px 10px 10px 12px;
+}
+
 .contact-bar ul li {
   margin: 10px;
 }
@@ -127,6 +136,10 @@ body {
   margin-bottom: 80px;
 }
 
+.featured-img-space {
+  margin-bottom: 12px;
+}
+
 .featured-img-space h3 {
   font-size: 25px;
   font-family: 'Crete Round', sans-serif;
@@ -144,4 +157,89 @@ body {
   display: flex;
   max-width: 100%;
   flex: 1;
+}
+
+.tags {
+  margin-bottom: 12px;
+}
+
+.tags ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.see-project {
+  font-size: 17px;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  color: var(--white-theme);
+  background-color: var(--theme3);
+  border: none;
+  padding: 12px;
+}
+
+.see-project:hover {
+  color: #ff6b00;
+  background-color: var(--offwhite-theme);
+}
+
+.see-project:active {
+  color: var(--offwhite-theme);
+  background-color: #e05304;
+}
+
+.see-project:disabled {
+  color: #5b5957;
+  background-color: #f4f1f0;
+}
+
+.card-button {
+  align-self: stretch;
+}
+
+.card-container {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+  row-gap: 24px;
+  margin-top: 10px;
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  background: url(../img/card-background.png);
+  width: 327px;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 16px 0 16px;
+}
+
+.project-title {
+  font-family: 'Crete Round', sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--white-theme);
+  margin-top: 85px;
+  margin-bottom: 0;
+}
+
+.project-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--white-theme);
+  margin-top: 7px;
+}
+
+.tags .card-tag {
+  background: rgba(255, 255, 255, 0.24);
+  border: none;
+  color: var(--white-theme);
 }
