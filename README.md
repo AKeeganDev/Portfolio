@@ -24,7 +24,8 @@ specific tasks include:
 - LinkedIn: [LinkedIn](https://linkedin.com/in/AKeeganDev)
 
 **Augusto Galindo**
--github: [@jsug9](https://github.com/jsug9)
+
+-GitHub: [@jsug9](https://github.com/jsug9)
 
 ## Show your support
 
