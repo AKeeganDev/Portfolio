@@ -372,6 +372,7 @@ form > * {
 
 textarea {
   padding: 10px;
+  display: flex;
 }
 
 textarea::placeholder {
@@ -391,4 +392,11 @@ textarea::placeholder {
 textarea::-webkit-resizer {
   background-image: url(../img/Union.png);
   background-repeat: no-repeat;
+}
+
+form button {
+  justify-content: center;
+  width: 131px;
+  height: 48px;
+  align-self: center;
 }
