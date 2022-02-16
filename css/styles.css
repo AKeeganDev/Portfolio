@@ -114,6 +114,10 @@ body {
   text-decoration: none;
 }
 
+form > * {
+  margin-bottom: 24px;
+}
+
 .recent-works {
   display: flex;
   flex-direction: column;
@@ -335,4 +339,77 @@ body {
 
 .skills-list {
   padding-left: 50px;
+}
+
+.contact-me {
+  padding: 120px 24px 0 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-me-header {
+  font-family: Inter, sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 0;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  font-family: Inter, sans-serif;
+  margin-bottom: 100px;
+}
+
+#details {
+  background-color: #fbf8f7;
+  border: none;
+}
+
+textarea {
+  padding: 10px;
+  display: flex;
+}
+
+textarea::placeholder {
+  color: #3c3a39;
+}
+
+#full-name,
+#email {
+  font-size: 15px;
+  font-family: Inter, sans-serif;
+  padding: 14px;
+  border: none;
+  border-bottom: 1.5px solid #dbd8d7;
+}
+
+textarea::-webkit-resizer {
+  background-image: url(../img/Union.png);
+  background-repeat: no-repeat;
+}
+
+form button {
+  justify-content: center;
+  width: 131px;
+  height: 48px;
+  align-self: center;
+}
+
+.bottom-divider {
+  border-bottom: 1px solid #dfe1e6;
+}
+
+.bottom-contact-bar {
+  justify-content: center;
+}
+
+.bottom-icons li a {
+  color: #505f79;
+  font-size: 22px;
+  padding: 10px 0;
 }
