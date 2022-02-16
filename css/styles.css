@@ -399,3 +399,18 @@ form button {
   height: 48px;
   align-self: center;
 }
+
+.bottom-divider {
+  border-bottom: 1px solid #dfe1e6;
+}
+    
+.bottom-contact-bar {
+  justify-content: center;
+}
+    
+.bottom-icons li a {
+  color: #505f79;
+  font-size: 22px;
+  padding: 10px 0px;
+}
+    
