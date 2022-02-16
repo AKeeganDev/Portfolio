@@ -114,6 +114,10 @@ body {
   text-decoration: none;
 }
 
+form > * {
+  margin-bottom: 24px;
+}
+
 .recent-works {
   display: flex;
   flex-direction: column;
@@ -338,18 +342,18 @@ body {
 }
 
 .contact-me {
-  padding: 120px 24px 0px 24px;
+  padding: 120px 24px 0 24px;
   display: flex;
   flex-direction: column;
 }
 
 .contact-me-header {
-  font-family: Inter,sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
   line-height: 44px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: center;
   padding-bottom: 20px;
 }
@@ -359,10 +363,6 @@ form {
   flex-direction: column;
   font-family: Inter, sans-serif;
   margin-bottom: 100px;
-}
-
-form > * {
-  margin-bottom: 24px;
 }
 
 #details {
@@ -385,8 +385,7 @@ textarea::placeholder {
   font-family: Inter, sans-serif;
   padding: 14px;
   border: none;
-  border-bottom: 1.5px solid #dBd8d7;
-  font: 15px;
+  border-bottom: 1.5px solid #dbd8d7;
 }
 
 textarea::-webkit-resizer {
