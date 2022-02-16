@@ -336,3 +336,59 @@ body {
 .skills-list {
   padding-left: 50px;
 }
+
+.contact-me {
+  padding: 120px 24px 0px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-me-header {
+  font-family: Inter,sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 0em;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  font-family: Inter, sans-serif;
+  margin-bottom: 100px;
+}
+
+form > * {
+  margin-bottom: 24px;
+}
+
+#details {
+  background-color: #fbf8f7;
+  border: none;
+}
+
+textarea {
+  padding: 10px;
+}
+
+textarea::placeholder {
+  color: #3c3a39;
+}
+
+#full-name,
+#email {
+  font-size: 15px;
+  font-family: Inter, sans-serif;
+  padding: 14px;
+  border: none;
+  border-bottom: 1.5px solid #dBd8d7;
+  font: 15px;
+}
+
+textarea::-webkit-resizer {
+  background-image: url(../img/Union.png);
+  background-repeat: no-repeat;
+}
