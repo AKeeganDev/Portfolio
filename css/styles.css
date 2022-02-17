@@ -309,6 +309,7 @@ form > * {
 .see-project:hover {
   color: #ff6b00;
   background-color: var(--offwhite-theme);
+  transition: background-color 2s;
 }
 
 .see-project:active {
