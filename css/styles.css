@@ -324,10 +324,10 @@ form > * {
 }
 
 .card-container {
-  display: grid;
-  grid-template-rows: auto auto auto auto auto auto auto;
-  row-gap: 24px;
-  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
 }
 
 .card {
