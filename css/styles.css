@@ -57,15 +57,27 @@ body {
   justify-content: baseline;
 }
 
+@media screen and (max-width: 899px) {
+  .nav-link{
+    display: none;
+  }
+  
+}
+
 .nav-link a {
   text-decoration: none;
   color: var(--white-theme);
-}
 }
 
 .hamburger {
   cursor: pointer;
   margin-right: 15px;
+}
+
+@media screen and (min-width: 900px) {
+  .hamburger {
+    display: none;
+  }
 }
 
 .bar {
@@ -74,19 +86,6 @@ body {
   height: 2px;
   margin: 5px auto;
   background-color: var(--white-theme);
-}
-
-@media screen and (max-width: 899px) {
-  .nav-link{
-    display: none;
-  }
-  
-}
-
-@media screen and (min-width: 900px) {
-  .hamburger {
-    display: none;
-  }
 }
 
 .welcome {
@@ -101,8 +100,16 @@ body {
   padding: 120px 24px;
 }
 
-.welcome p {
-  max-width: 300px;
+.greeting-text-container {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  color: var(--white-theme);
+}
+
+
+.greeting-text-container p {
+  max-width: 520px;
   font-size: 16px;
   line-height: 24px;
 }
@@ -113,8 +120,8 @@ body {
   font-size: 24px;
 }
 
-.welcome h1,
-.welcome h3 {
+.greeting-text-container h1,
+.greeting-text-container h3 {
   margin: 0;
   padding: 0;
 }
@@ -125,6 +132,7 @@ body {
   font-size: 56px;
   font-family: 'Crete Round', sans-serif;
   margin-bottom: 12px;
+  max-width: 350px;
 }
 
 .contact-bar {
@@ -139,6 +147,46 @@ body {
   margin: 0;
   padding: 0;
   max-width: 200px;
+}
+
+@media screen and (min-width: 675px) {
+  .greeting {
+    font-size: 72px;
+  }
+
+  .greeting-text-container p {
+    font-size: 20px;
+  }
+
+  .who-am-i {
+    font-size: 32px;
+  }
+  
+  .welcome {
+    flex-direction: row;
+    background-image: url(../img/Illustration-header-full.svg);
+    background-repeat: no-repeat;
+    background-position-x: 500px;
+    background-position-y: 40%;
+    padding-top: 200px;
+  }
+
+  @media screen and (min-width: 1175px) {
+    .welcome {
+      background-position-x: 100%;
+    }
+  }
+
+  .contact-bar ul{
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contact-bar {
+    margin-right: 35px;
+    order: -1;
+  }
+  
 }
 
 .tags li {
