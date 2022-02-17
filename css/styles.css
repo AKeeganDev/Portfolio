@@ -76,6 +76,17 @@ body {
   .hamburger {
     display: none;
   }
+
+  .contact-bar {
+    margin-right: 35px;
+    order: -1;
+  }
+
+  .contact-bar ul {
+    flex-direction: column;
+    justify-content: center;
+  }
+
 }
 
 .bar {
@@ -211,6 +222,8 @@ form > * {
   padding-top: 10px;
 }
 
+/*Recent Work Header Code*/
+
 .recent-work-heading-container {
   display: flex;
   justify-content: center;
@@ -227,6 +240,14 @@ form > * {
   margin: 0 15px 80px 15px;
 }
 
+.title-project {
+  display: flex;
+}
+
+.title-project-details p {
+  max-width: 500px;
+}
+
 .heading h1 {
   font-size: 38px;
   font-weight: 400;
@@ -234,7 +255,9 @@ form > * {
 }
 
 .featured-img-space {
+  display: flex;
   margin-bottom: 12px;
+  flex-direction: column;
 }
 
 .featured-img-space h3 {
@@ -251,9 +274,12 @@ form > * {
 }
 
 .featured-img {
-  width: 321.688px;
-  height: 233.141px;
-  background-image: url(../img/featured-img.png);
+  min-width: 321.688px;
+  min-height: 233.141px;
+  background-image: url(../img/Img\ Placeholder.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  flex: 1 0 auto;
 }
 
 .tags {
@@ -274,6 +300,10 @@ form > * {
   background-color: var(--theme3);
   border: none;
   padding: 12px;
+}
+
+.featured-img-space .see-project {
+  max-width: 124px;
 }
 
 .see-project:hover {
@@ -529,20 +559,13 @@ form button {
   }
 }
 
-@media screen and (min-width: 1175px) {
+@media screen and (min-width: 1177px) {
   .welcome {
     background-position-x: 100%;
   }
+}
 
-  .contact-bar ul {
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .contact-bar {
-    margin-right: 35px;
-    order: -1;
-  }
+@media screen and (min-width: 1100px) {
 
   .recent-work-heading-container {
     display: flex;
@@ -560,5 +583,19 @@ form button {
     margin: 0 15px;
     align-self: center;
     margin-bottom: 0;
+  }
+
+  .featured-img-space {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .featured-img {
+    width: 684px;
+    height: 448px;
+  }
+
+  .title-project-details {
+    max-width: 500px;
   }
 }
