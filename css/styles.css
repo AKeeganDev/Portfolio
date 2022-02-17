@@ -86,7 +86,6 @@ body {
     flex-direction: column;
     justify-content: center;
   }
-
 }
 
 .bar {
@@ -222,8 +221,6 @@ form > * {
   padding-top: 10px;
 }
 
-/*Recent Work Header Code*/
-
 .recent-work-heading-container {
   display: flex;
   justify-content: center;
@@ -309,6 +306,7 @@ form > * {
 .see-project:hover {
   color: #ff6b00;
   background-color: var(--offwhite-theme);
+  transition: background-color 2s;
 }
 
 .see-project:active {
@@ -566,7 +564,6 @@ form button {
 }
 
 @media screen and (min-width: 1100px) {
-
   .recent-work-heading-container {
     display: flex;
     flex-direction: row;
