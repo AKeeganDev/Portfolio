@@ -25,7 +25,7 @@ body {
 
 .top-nav {
   display: flex;
-  padding: 5px 24px;
+  padding: 5px 24px 5px 24px;
   justify-content: space-between;
   align-items: center;
   flex: 1;
@@ -56,7 +56,7 @@ body {
   margin: 0 40px;
 }
 
-@media screen and (max-width: 899px) {
+@media screen and (max-width: 674px) {
   .nav-link {
     display: none;
   }
@@ -72,7 +72,7 @@ body {
   margin-right: 15px;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 675px) {
   .hamburger {
     display: none;
   }
@@ -166,6 +166,10 @@ body {
     background-position-x: 500px;
     background-position-y: 40%;
     padding-top: 200px;
+  }
+
+  .logo {
+    padding-left: 68px;
   }
 
   @media screen and (min-width: 1175px) {
