@@ -91,7 +91,6 @@ body {
   .bottom-contact-bar .bottom-icons {
     flex-direction: row;
   }
-
 }
 
 .bar {
@@ -212,8 +211,8 @@ form > * {
 }
 
 .heading,
-.headings
-.skill{
+.headings,
+.skill {
   font-family: 'Crete Round', sans-serif;
   font-size: 25px;
   font-weight: 100;
@@ -223,7 +222,7 @@ form > * {
 }
 
 .headings {
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -425,7 +424,7 @@ form > * {
 }
 
 .margin {
-  padding: 0 0px;
+  padding: 0;
   background-color: var(--theme2);
 }
 
@@ -463,7 +462,7 @@ form > * {
 .skills-list {
   font-family: 'InaiMathi', sans-serif;
   font-size: 32px;
-  padding: 0px 90px 0 45px;
+  padding: 0 90px 0 45px;
   margin-bottom: 44px;
 }
 
@@ -596,7 +595,6 @@ form button {
   form button {
     align-self: flex-start;
   }
-  
 }
 
 @media screen and (min-width: 1177px) {
