@@ -49,6 +49,7 @@ body {
   display: flex;
   list-style: none;
   align-items: center;
+  padding-left: 0;
 }
 
 .nav-link {
@@ -324,10 +325,12 @@ form > * {
 }
 
 .card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
+  width: 100%;
+  display: grid;
   justify-content: center;
+  gap: 28px;
+  grid-template-columns: repeat(auto-fit, 327px);
+  row-gap: 25px;
 }
 
 .card {
@@ -370,10 +373,20 @@ form > * {
 }
 
 .personal {
+  display: flex;
+  align-items: center;
   background-color: var(--theme2);
   background-image: url("../img/illustration-about-me-mobile.png");
   background-repeat: no-repeat;
   background-position: 100% 100%;
+}
+
+.personal-text p {
+  max-width: 500px;
+}
+
+.title-project-details {
+  max-width: 500px;
 }
 
 .personal .greeting {
@@ -594,5 +607,20 @@ form button {
 
   .title-project-details {
     max-width: 500px;
+  }
+
+  .personal {
+    display: flex;
+    background-image: url(../img/illustration-about\ me.svg);
+    background-position: 100%;
+  }
+
+  .personal-text {
+    padding-left: 40px;
+    align-self: flex-start;
+  }
+
+  .personal-text p {
+    width: 500px;
   }
 }
