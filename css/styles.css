@@ -353,6 +353,18 @@ form > * {
   width: 327px;
 }
 
+.card1 {
+  background-image: url(../img/card1.png);
+}
+
+.card2 {
+  background-image: url(../img/card2.png);
+}
+
+.card3 {
+  background-image: url(../img/card3.png);
+}
+
 .card-details {
   display: flex;
   flex-direction: column;
