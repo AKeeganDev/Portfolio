@@ -16,14 +16,42 @@
   <header>
     <nav class="top-nav">
       <a class="logo" href="#">Aaron Keegan</a>
-      <i class="fa fa-bars"></i>
+      <div class="right-links">
+        <ul>
+          <li class="nav-link">
+            <a href="#">Portfolio</a>
+          </li>
+          <li class="nav-link">
+            <a href="#">About</a>
+          </li>
+          <li class="nav-link">
+            <a href="#">Contact</a>
+          </li>
+          <li class="nav-link icon-mail">
+            <a href="#">
+              <div class="icon-mail"></div>
+            </a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <div class="bar">
+          </div>
+          <div class="bar">
+          </div>
+          <div class="bar">
+          </div>
+        </div>
+      </div>
     </nav>
   </header>
   <section class="welcome">
-    <div class="greeting">Hey There. I'm Aaron</div>
+    <div class="greeting-text-container">
+      <div class="greeting">Hey There. I'm Aaron</div>
     <h3 class="who-am-i">I am a software Developer</h3>
     <p>Welcome to my portfolio page. My goal is to help you expand your business or share ideas around the globe. The power of the internet makes that a reality today! 
-      For info about me and for snapshots of my work, please continue reading my site.</p>
+      For info about me and for snapshots of my work, please continue reading my site.
+    </p>
+    </div>
     <div class="contact-bar">
       <ul>
         <li><a href="#" class="fa fa-github"></a></li>
@@ -35,39 +63,105 @@
     </div>
   </section>
   <section class="recent-works">
-    <div class="heading">
-      <h1>My Recent Works</h1>
+    <div class="recent-work-heading-container">
+      <div class="heading">
+        <h1>My Recent Works</h1>
+      </div>
+      <div class="recent-work-divider"></div>
     </div>
-    <div class="card-container">
+    <div class="title-project">
       <div class="featured-img-space">
         <div class="featured-img"></div>
-        <h3>Multi-Post Stories</h3>
-        <p>A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.</p>
-        <div class="tags">
-          <ul>
-            <li>
-              <div>
-                CSS
-              </div>
-            </li>
-            <li>
-              <div>
-                HTML
-              </div>
-            </li>
-            <li>
-              <div>
-                Bootstrap
-              </div>
-            </li>
-            <li>
-              <div>
-                Ruby
-              </div>
-            </li>
-          </ul>
+        <div class="title-project-details">
+          <h3>Multi-Post Stories</h3>
+          <p>A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.</p>
+          <div class="tags">
+            <ul>
+              <li>
+                <div>
+                  CSS
+                </div>
+              </li>
+              <li>
+                <div>
+                  HTML
+                </div>
+              </li>
+              <li>
+                <div>
+                  Bootstrap
+                </div>
+              </li>
+              <li>
+                <div>
+                  Ruby
+                </div>
+              </li>
+            </ul>
+          </div>
+          <button type="button" class="see-project"><span>See Project</span></button>
         </div>
-        <button type="button" class="see-project"><span>See Project</span></button>
+      </div>
+    </div>
+    <div class="card-container">
+      <div class="card card1">
+        <div class="card-details">
+        </div>
+        <button type="button" class="see-project card-button"><span>See Project</span></button>
+      </div>
+      <div class="card card2">
+        <div class="card-details">
+          <h3 class="project-title">
+            Professional Art Printing Data
+          </h3>
+          <p class="project-description">A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard</p>
+          <div class="tags">
+            <ul>
+              <li class="card-tag">
+                <div>
+                  CSS
+                </div>
+              </li>
+              <li class="card-tag">
+                <div>
+                  Bootstrap
+                </div>
+              </li>
+              <li class="card-tag">
+                <div>
+                  Ruby
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card card3">
+        <div class="card-details">
+          <h3 class="project-title">
+            Professional Art Printing Data
+          </h3>
+          <p class="project-description">A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard</p>
+          <div class="tags">
+            <ul>
+              <li class="card-tag">
+                <div>
+                  CSS
+                </div>
+              </li>
+              <li class="card-tag">
+                <div>
+                  Bootstrap
+                </div>
+              </li>
+              <li class="card-tag">
+                <div>
+                  Ruby
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
       <div class="card">
         <div class="card-details">
@@ -95,9 +189,8 @@
             </ul>
           </div>
         </div>
-        <button type="button" class="see-project card-button"><span>See Project</span></button>
       </div>
-      <div class="card">
+      <div class="card card2">
         <div class="card-details">
           <h3 class="project-title">
             Professional Art Printing Data
@@ -123,9 +216,8 @@
             </ul>
           </div>
         </div>
-        <button type="button" class="see-project card-button"><span>See Project</span></button>
       </div>
-      <div class="card">
+      <div class="card card3">
         <div class="card-details">
           <h3 class="project-title">
             Professional Art Printing Data
@@ -151,124 +243,51 @@
             </ul>
           </div>
         </div>
-        <button type="button" class="see-project card-button"><span>See Project</span></button>
-      </div>
-      <div class="card">
-        <div class="card-details">
-          <h3 class="project-title">
-            Professional Art Printing Data
-          </h3>
-          <p class="project-description">A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard</p>
-          <div class="tags">
-            <ul>
-              <li class="card-tag">
-                <div>
-                  CSS
-                </div>
-              </li>
-              <li class="card-tag">
-                <div>
-                  Bootstrap
-                </div>
-              </li>
-              <li class="card-tag">
-                <div>
-                  Ruby
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <button type="button" class="see-project card-button"><span>See Project</span></button>
-      </div>
-      <div class="card">
-        <div class="card-details">
-          <h3 class="project-title">
-            Professional Art Printing Data
-          </h3>
-          <p class="project-description">A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard</p>
-          <div class="tags">
-            <ul>
-              <li class="card-tag">
-                <div>
-                  CSS
-                </div>
-              </li>
-              <li class="card-tag">
-                <div>
-                  Bootstrap
-                </div>
-              </li>
-              <li class="card-tag">
-                <div>
-                  Ruby
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <button type="button" class="see-project card-button"><span>See Project</span></button>
-      </div>
-      <div class="card">
-        <div class="card-details">
-          <h3 class="project-title">
-            Professional Art Printing Data
-          </h3>
-          <p class="project-description">A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard</p>
-          <div class="tags">
-            <ul>
-              <li class="card-tag">
-                <div>
-                  CSS
-                </div>
-              </li>
-              <li class="card-tag">
-                <div>
-                  Bootstrap
-                </div>
-              </li>
-              <li class="card-tag">
-                <div>
-                  Ruby
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <button type="button" class="see-project card-button"><span>See Project</span></button>
       </div>
     </div>
   </section>
   <section class="about-myself">
     <div class="personal">
-      <h1 class="greeting">About me</h1>
-      <p>Hello I’m a software developer! I can help you build a product, website feature or website! Take a look through some of my work and experience. If you like what you see and have a project you need coded, don’t hestiate to contact me.</p>
-      <button type="button" class="see-project resume"><span>Get my Resume</span></button>
+      <div class="personal-text">
+        <h1 class="greeting">About me</h1>
+        <p>Hello I’m a software developer! I can help you build a product, website feature or website! Take a look through some of my work and experience. If you like what you see and have a project you need coded, don’t hestiate to contact me.</p>
+        <button type="button" class="see-project resume"><span>Get my Resume</span></button>
+      </div>
     </div>
     <div class="margin">
       <div class="divider"></div>
     </div>
     <div class="skills">
       <div class="headings">
-        <ul>
-          <li class="language"><span class="orange">&#9670;</span>Language
-            <li class="lang">Javascript</li>
-            <li class="lang">Ruby</li>
-            <li class="lang">HTML</li>
-            <li class="lang">CSS</li>
-          <li class="frameworks"><span class="orange">&#9632;</span>Frameworks
+        <div class="skill">
+          <ul>
+            <li class="language"><span class="orange">&#9670;</span>Language
+              <li class="lang">Javascript</li>
+              <li class="lang">Ruby</li>
+              <li class="lang">HTML</li>
+              <li class="lang">CSS</li>
+          </ul>
+        </div>
+        <div class="skill">
+          <ul>
+            <li class="frameworks"><span class="orange">&#9632;</span>Frameworks
             <li class="lang">Bootstrap</li>
             <li class="lang">Ruby on Rails</li>
             <li class="lang">RSPEC</li>
             <li class="lang">CapyBara</li>
             <li class="lang">Selenium</li>
-          <li class="skills-list"><span class="orange">&#9679;</span>Skills
-            <li class="lang">Codekit</li>
-            <li class="lang">Github</li>
-            <li class="lang">Codepen</li>
-            <li class="lang">Gitlab</li>
-            <li class="lang">Terminal</li>
-        </ul>
+          </ul>
+        </div>
+        <div class="skill">
+          <ul>
+            <li class="skills-list"><span class="orange">&#9679;</span>Skills
+              <li class="lang">Codekit</li>
+              <li class="lang">Github</li>
+              <li class="lang">Codepen</li>
+              <li class="lang">Gitlab</li>
+              <li class="lang">Terminal</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -282,6 +301,7 @@
       <textarea name="details" id="details" cols="30" rows="10" placeholder="(Optional) Please feel free to add any details of the project that you will be inquiring about" maxlength="500"></textarea>
       <button type="submit" class="see-project submit">Get in touch</button>
     </form>
+  </section>
     <div class="bottom-divider"></div>
     <div class="contact-bar bottom-contact-bar">
       <ul class="bottom-icons">
@@ -292,6 +312,5 @@
         <li><a href="#" class="fa fa-instagram"></a></li>
       </ul>
     </div>
-  </section>
 </body>
 </html>
