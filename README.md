@@ -27,6 +27,10 @@ specific tasks include:
 
 -GitHub: [@jsug9](https://github.com/jsug9)
 
+## Live Demo
+
+https://akeegandev.github.io/Portfolio/
+
 ## Show your support
 
 Give a ⭐️ if you like this project!
