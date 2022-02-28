@@ -23,6 +23,16 @@ body {
   font-size: 16px;
 }
 
+.hidden {
+  display: none;
+}
+
+/* .test {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+} */
+
 .top-nav {
   display: flex;
   padding: 5px 24px 5px 24px;
@@ -60,12 +70,39 @@ body {
 @media screen and (max-width: 674px) {
   .nav-link {
     display: none;
+    border-bottom: 1px solid #6f6c6b;
+    width: 100%;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 44px;
+    padding: 20px 0 10px;
+  }
+
+  .test li a {
+    color: var(--offwhite-theme);
+    width: 100%;
   }
 
   .display-block {
     display: flex;
     flex-direction: column;
   }
+
+  .test {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+  } 
+
+  .right-links {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .icon-mail {
+    display: none;
+  }
+  
 }
 
 .nav-link a {
