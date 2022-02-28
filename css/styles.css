@@ -61,6 +61,11 @@ body {
   .nav-link {
     display: none;
   }
+
+  .display-block {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .nav-link a {
@@ -93,6 +98,10 @@ body {
   }
 }
 
+#nav-toggle {
+  transition: all 1s ease-in-out;
+}
+
 .bar {
   display: block;
   width: 25px;
@@ -101,12 +110,19 @@ body {
   background-color: var(--white-theme);
 }
 
-.change .bar-top {
-  transform: translateY(15px) rotateZ(45deg);
+.bar-top.change {
+  transform: translateY(14px) rotateZ(45deg);
+  transition: all 1s ease-in-out;
 }
 
-.change .bar-bottom {
-  transform: translateY(-15px) rotateZ(-45deg);
+.change.bar-bottom {
+  transform: translateY(0px) rotateZ(-45deg);
+  transition: all 1s ease-in-out;
+}
+
+.fill-height {
+  height: 100vh;
+  align-items: flex-start;
 }
 
 .welcome {
@@ -672,8 +688,8 @@ form button {
   }
 }
 
-.hidden {
-  display: none;
+.bar-middle.hidden {
+  background-color: var(--theme1);
 }
 
 .open {
