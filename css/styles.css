@@ -663,3 +663,11 @@ form button {
     width: 500px;
   }
 }
+
+.hidden {
+  display: none;
+}
+
+.open {
+  height: 100%;
+}
