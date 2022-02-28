@@ -101,6 +101,14 @@ body {
   background-color: var(--white-theme);
 }
 
+.change .bar-top {
+  transform: translateY(15px) rotateZ(45deg);
+}
+
+.change .bar-bottom {
+  transform: translateY(-15px) rotateZ(-45deg);
+}
+
 .welcome {
   display: flex;
   box-sizing: border-box;
