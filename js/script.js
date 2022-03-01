@@ -3,20 +3,55 @@ const navToggle = document.querySelector('#nav-toggle');
 const barTop = document.querySelector('.bar-top');
 const barBottom = document.querySelector('.bar-bottom');
 const barMiddle = document.querySelector('.bar-middle');
-const navLinks = document.querySelectorAll('.nav-link');
-const navLink = document.querySelector('.nav-link');
+const navList = document.querySelectorAll('.nav-link');
+const navListItem = document.querySelector('.nav-link');
 const logo = document.querySelector('#logo');
 
-
+let menuExpanded = false;
 
 navToggle.addEventListener('click', () => {
-  transform();
-  expand();
-  logo.classList.toggle('hidden');
+  if (menuExpanded !== true) {
+    openMenu();
+  } else {
+    closeMenu();
+  }
 })
 
-function transform() {
-  console.log('test');
+window.addEventListener('resize', () => {
+  if (menuExpanded && window.innerWidth > 674) {
+    closeMenu();
+    transformBars;
+  }
+})
+
+navList.forEach(navItem => {
+  navItem.addEventListener('click', () => {
+    closeMenu();
+  })
+}
+)
+
+function openMenu() {
+  menuExpanded = true;
+  transformClose();
+  expand();
+  logo.classList.toggle('hidden');
+}
+
+function closeMenu() {
+  menuExpanded = false;
+  transformBars();
+  collapse();
+  logo.classList.remove('hidden');
+}
+
+function transformClose() {
+  barTop.classList.toggle('change');
+  barBottom.classList.toggle('change');
+  barMiddle.classList.toggle('hidden');
+}
+
+function transformBars() {
   barTop.classList.toggle('change');
   barBottom.classList.toggle('change');
   barMiddle.classList.toggle('hidden');
@@ -24,6 +59,13 @@ function transform() {
 
 
 function expand() {
-  topNav.classList.add('fill-height');
-  navLinks.forEach(link => link.classList.add('display-block'));
+  topNav.style.height = '100vh';
+  topNav.style.alignItems = 'flex-start';
+  navList.forEach(link => link.classList.add('display-block'));
+}
+
+function collapse() {
+  topNav.style.height = 'inherit';
+  topNav.style.alignItems = 'center';
+  navList.forEach(link => link.classList.remove('display-block'));
 }

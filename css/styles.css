@@ -9,6 +9,10 @@
   --offwhite-theme2: #dbd8d7;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--primary-bg);
   justify-content: center;
@@ -21,17 +25,16 @@ body {
   text-decoration: none;
   color: var(--white-theme);
   font-size: 16px;
+  min-width: 112px;
 }
 
 .hidden {
   display: none;
 }
 
-/* .test {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-} */
+header {
+  transition: all .5s ease-in-out;
+}
 
 .top-nav {
   display: flex;
@@ -42,10 +45,13 @@ body {
   font-size: 15px;
   background-color: var(--theme1);
   color: var(--white-theme);
+  height: inherit;
+
 }
 
 .right-links {
   display: flex;
+  transition: all 2s ease-in-out;
 }
 
 .icon-mail {
@@ -60,6 +66,8 @@ body {
   list-style: none;
   align-items: center;
   padding-left: 0;
+  transition: all 2s ease-in-out;
+  flex: 1;
 }
 
 .nav-link {
@@ -76,11 +84,12 @@ body {
     font-weight: 700;
     line-height: 44px;
     padding: 20px 0 10px;
+    transition: all 2s ease-in-out;
   }
 
-  .test li a {
+  .nav-links li a {
     color: var(--offwhite-theme);
-    width: 100%;
+    transition: all 2s ease-in-out;
   }
 
   .display-block {
@@ -88,21 +97,20 @@ body {
     flex-direction: column;
   }
 
-  .test {
+  .nav-links {
     display: flex;
     flex-direction: column;
-    padding-top: 50px;
   } 
 
   .right-links {
     width: 100%;
     justify-content: space-between;
+    transition: all .5s ease-in-out;
   }
 
   .icon-mail {
     display: none;
   }
-  
 }
 
 .nav-link a {
@@ -113,6 +121,10 @@ body {
 .hamburger {
   cursor: pointer;
   margin-right: 15px;
+  position: absolute;
+  left: 85%;
+  top: 4;
+  transition-duration: 500ms;
 }
 
 @media screen and (min-width: 675px) {
@@ -135,31 +147,21 @@ body {
   }
 }
 
-#nav-toggle {
-  transition: all 1s ease-in-out;
-}
-
 .bar {
   display: block;
   width: 25px;
   height: 2px;
   margin: 5px auto;
   background-color: var(--white-theme);
+  transition-duration: 500ms;
 }
 
 .bar-top.change {
   transform: translateY(14px) rotateZ(45deg);
-  transition: all 1s ease-in-out;
 }
 
 .change.bar-bottom {
   transform: translateY(0px) rotateZ(-45deg);
-  transition: all 1s ease-in-out;
-}
-
-.fill-height {
-  height: 100vh;
-  align-items: flex-start;
 }
 
 .welcome {
