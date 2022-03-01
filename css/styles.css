@@ -9,6 +9,10 @@
   --offwhite-theme2: #dbd8d7;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--primary-bg);
   justify-content: center;
@@ -21,6 +25,15 @@ body {
   text-decoration: none;
   color: var(--white-theme);
   font-size: 16px;
+  min-width: 112px;
+}
+
+.hidden {
+  display: none;
+}
+
+header {
+  transition: all 500ms ease-in-out;
 }
 
 .top-nav {
@@ -32,10 +45,12 @@ body {
   font-size: 15px;
   background-color: var(--theme1);
   color: var(--white-theme);
+  height: inherit;
 }
 
 .right-links {
   display: flex;
+  transition: all 2s ease-in-out;
 }
 
 .icon-mail {
@@ -50,6 +65,8 @@ body {
   list-style: none;
   align-items: center;
   padding-left: 0;
+  transition: all 2s ease-in-out;
+  flex: 1;
 }
 
 .nav-link {
@@ -57,8 +74,44 @@ body {
   margin: 0 40px;
 }
 
+#mail-icon {
+  margin-right: 0;
+}
+
 @media screen and (max-width: 674px) {
   .nav-link {
+    display: none;
+    border-bottom: 1px solid #6f6c6b;
+    width: 100%;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 44px;
+    padding: 20px 0 10px;
+    transition: all 2s ease-in-out;
+  }
+
+  .nav-links li a {
+    color: var(--offwhite-theme);
+    transition: all 2s ease-in-out;
+  }
+
+  .display-block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .right-links {
+    width: 100%;
+    justify-content: space-between;
+    transition: all 500ms ease-in-out;
+  }
+
+  .icon-mail {
     display: none;
   }
 }
@@ -71,6 +124,9 @@ body {
 .hamburger {
   cursor: pointer;
   margin-right: 15px;
+  position: absolute;
+  left: 85%;
+  transition-duration: 500ms;
 }
 
 @media screen and (min-width: 675px) {
@@ -99,6 +155,15 @@ body {
   height: 2px;
   margin: 5px auto;
   background-color: var(--white-theme);
+  transition-duration: 500ms;
+}
+
+.bar-top.change {
+  transform: translateY(14px) rotateZ(45deg);
+}
+
+.change.bar-bottom {
+  transform: translateY(0) rotateZ(-45deg);
 }
 
 .welcome {
@@ -662,4 +727,12 @@ form button {
   .personal-text p {
     width: 500px;
   }
+}
+
+.bar-middle.hidden {
+  background-color: var(--theme1);
+}
+
+.open {
+  height: 100%;
 }
