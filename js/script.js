@@ -5,6 +5,8 @@ const barBottom = document.querySelector('.bar-bottom');
 const barMiddle = document.querySelector('.bar-middle');
 const navList = document.querySelectorAll('.nav-link');
 const logo = document.querySelector('#logo');
+const cardContainer = document.querySelector('.card-container');
+const portfolio = document.querySelector('#portfolio');
 
 function PortfolioProject(id, title, description, featuredIMGURL, technologies, demoURL, linkToSource) {
   this.id = id;
@@ -33,9 +35,18 @@ let titleCard = new TitleProject('title-project', 'Multi-Post Stories', '../img/
 
 let project1 = new PortfolioProject('project1', 'Drinks I like', 'I like cocktails like Gin and Tonic, Moscow Mules, Micholadas, and anything strong enough to numb the sting Microverse\'s project Requirements!', '../img/modal.svg', ['CSS', 'Bootstrap', 'Ruby'], '#', '#');
 
-for (let [property, value] of Object.entries(titleCard)) {
-  console.log(`${property}: ${value}`);
-}
+// for (let [property, value] of Object.entries(titleCard)) {
+//   console.log(`${property}: ${value}`);
+// }
+
+let titleContainer = document.createElement('div');
+titleContainer.classList.add('title-project');
+portfolio.insertBefore(titleContainer, cardContainer);
+
+let featuredImageSpace = document.createElement('div');
+featuredImageSpace.classList.add('featured-img-space');
+titleContainer.appendChild(featuredImageSpace).appendChild(document.createElement('div'));
+
 
 let menuExpanded = false;
 
