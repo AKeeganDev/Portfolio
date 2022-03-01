@@ -33,7 +33,7 @@ body {
 }
 
 header {
-  transition: all .5s ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 
 .top-nav {
@@ -46,7 +46,6 @@ header {
   background-color: var(--theme1);
   color: var(--white-theme);
   height: inherit;
-
 }
 
 .right-links {
@@ -75,6 +74,10 @@ header {
   margin: 0 40px;
 }
 
+#mail-icon {
+  margin-right: 0;
+}
+
 @media screen and (max-width: 674px) {
   .nav-link {
     display: none;
@@ -100,12 +103,12 @@ header {
   .nav-links {
     display: flex;
     flex-direction: column;
-  } 
+  }
 
   .right-links {
     width: 100%;
     justify-content: space-between;
-    transition: all .5s ease-in-out;
+    transition: all 500ms ease-in-out;
   }
 
   .icon-mail {
@@ -123,7 +126,6 @@ header {
   margin-right: 15px;
   position: absolute;
   left: 85%;
-  top: 4;
   transition-duration: 500ms;
 }
 
@@ -161,7 +163,7 @@ header {
 }
 
 .change.bar-bottom {
-  transform: translateY(0px) rotateZ(-45deg);
+  transform: translateY(0) rotateZ(-45deg);
 }
 
 .welcome {

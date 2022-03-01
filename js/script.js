@@ -4,32 +4,33 @@ const barTop = document.querySelector('.bar-top');
 const barBottom = document.querySelector('.bar-bottom');
 const barMiddle = document.querySelector('.bar-middle');
 const navList = document.querySelectorAll('.nav-link');
-const navListItem = document.querySelector('.nav-link');
 const logo = document.querySelector('#logo');
 
 let menuExpanded = false;
 
-navToggle.addEventListener('click', () => {
-  if (menuExpanded !== true) {
-    openMenu();
-  } else {
-    closeMenu();
-  }
-})
-
-window.addEventListener('resize', () => {
-  if (menuExpanded && window.innerWidth > 674) {
-    closeMenu();
-    transformBars;
-  }
-})
-
-navList.forEach(navItem => {
-  navItem.addEventListener('click', () => {
-    closeMenu();
-  })
+function transformClose() {
+  barTop.classList.toggle('change');
+  barBottom.classList.toggle('change');
+  barMiddle.classList.toggle('hidden');
 }
-)
+
+function transformBars() {
+  barTop.classList.toggle('change');
+  barBottom.classList.toggle('change');
+  barMiddle.classList.toggle('hidden');
+}
+
+function expand() {
+  topNav.style.height = '100vh';
+  topNav.style.alignItems = 'flex-start';
+  navList.forEach((link) => link.classList.add('display-block'));
+}
+
+function collapse() {
+  topNav.style.height = 'inherit';
+  topNav.style.alignItems = 'center';
+  navList.forEach((link) => link.classList.remove('display-block'));
+}
 
 function openMenu() {
   menuExpanded = true;
@@ -45,27 +46,23 @@ function closeMenu() {
   logo.classList.remove('hidden');
 }
 
-function transformClose() {
-  barTop.classList.toggle('change');
-  barBottom.classList.toggle('change');
-  barMiddle.classList.toggle('hidden');
-}
+navToggle.addEventListener('click', () => {
+  if (menuExpanded !== true) {
+    openMenu();
+  } else {
+    closeMenu();
+  }
+});
 
-function transformBars() {
-  barTop.classList.toggle('change');
-  barBottom.classList.toggle('change');
-  barMiddle.classList.toggle('hidden');
-}
+window.addEventListener('resize', () => {
+  if (menuExpanded && window.innerWidth > 674) {
+    closeMenu();
+    transformBars();
+  }
+});
 
-
-function expand() {
-  topNav.style.height = '100vh';
-  topNav.style.alignItems = 'flex-start';
-  navList.forEach(link => link.classList.add('display-block'));
-}
-
-function collapse() {
-  topNav.style.height = 'inherit';
-  topNav.style.alignItems = 'center';
-  navList.forEach(link => link.classList.remove('display-block'));
-}
+navList.forEach((navItem) => {
+  navItem.addEventListener('click', () => {
+    closeMenu();
+  });
+});
