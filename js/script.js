@@ -6,6 +6,37 @@ const barMiddle = document.querySelector('.bar-middle');
 const navList = document.querySelectorAll('.nav-link');
 const logo = document.querySelector('#logo');
 
+function PortfolioProject(id, title, description, featuredIMGURL, technologies, demoURL, linkToSource) {
+  this.id = id;
+  this.title = title;
+  this.description = description;
+  this.featuredIMG = featuredIMGURL;
+  this.technologies = technologies;
+  this.linkToDemo = demoURL;
+  this.linkToSource = linkToSource;
+}
+
+function TitleProject(id, title, titleIMGURL, description, featuredIMGURL, technologies, demoURL, linkToSource) {
+  this.id = id;
+  this.title = title;
+  this.titleIMGURL = titleIMGURL;
+  this.description = description;
+  this.featuredIMG = featuredIMGURL;
+  this.technologies = technologies;
+  this.linkToDemo = demoURL;
+  this.linkToSource = linkToSource;
+}
+
+//url(../img/Img\ Placeholder.svg)
+
+let titleCard = new TitleProject('title-project', 'Multi-Post Stories', '../img/Img\ Placeholder.svg', 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.', null, ['CSS', 'HTML', 'Bootstrap', 'Ruby'], '#', '#');
+
+let project1 = new PortfolioProject('project1', 'Drinks I like', 'I like cocktails like Gin and Tonic, Moscow Mules, Micholadas, and anything strong enough to numb the sting Microverse\'s project Requirements!', '../img/modal.svg', ['CSS', 'Bootstrap', 'Ruby'], '#', '#');
+
+for (let [property, value] of Object.entries(titleCard)) {
+  console.log(`${property}: ${value}`);
+}
+
 let menuExpanded = false;
 
 function transformClose() {
