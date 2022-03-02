@@ -119,6 +119,14 @@ header {
     display: none;
   }
 
+  .modal-image {
+    width: 70%;
+  }
+
+  button.modal-button {
+    font-size: .8rem;
+  }
+
   .modal-description-text-desktop {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -131,6 +139,10 @@ header {
     align-items: center;
     margin-top: 1rem;
     margin: 0 auto;
+  }
+
+  .modal-button {
+    font-size: .8rem;
   }
 }
 
@@ -179,12 +191,17 @@ header {
     font-weight: 500;
   }
 
+  @media screen and (max-width: 786px){
+    button.modal-button{
+      font-size: .8rem;
+    }
+  }
 
   .modal-details {
     display: flex;
     flex-direction: row;
-    margin-top: 5rem;
-    gap: 20px
+    margin-top: 1rem;
+    gap: 30px
   }
 }
 
@@ -794,11 +811,10 @@ form button {
   box-sizing: border-box;
   background-color: var(--white-theme);
   border: 1px solid #dfe1e6;
-  margin: 6000px 2rem;
+  margin: 0 2rem;
   display: flex;
   flex-direction: column;
   width: 343px;
-  height: 718px;
   padding: 1rem;
   flex: 1;
 }
@@ -862,15 +878,13 @@ form button {
 .modal-image {
   display: flex;
   flex: 1;
-  min-width: 320px;
-  min-height: 220px;
-  background-image: url(../img/modal-img.svg);
-  background-repeat: no-repeat;
-  background-size:contain
+  width: 50%;
+  max-width: 760px;
+  margin: 1rem 0;
 }
 
 .modal-description-text-desktop {
-  overflow: hidden;
+  overflow: scroll;
   font-family: 'inter', sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -879,6 +893,41 @@ form button {
   max-width: 400px;
   max-height: 200px;
   margin-top: 0;
+  padding-right: 0;
+  overflow-x: hidden;
 }
 
-.modal-detail
+p::-webkit-scrollbar {
+  background-color: #e4e4e4;
+  border-radius: 100px;
+  box-shadow: inset 0 0 5px grey;
+}
+
+p::-webkit-scrollbar-thumb {
+  background-color: #685c5c;
+  border-radius: 100px;
+}
+
+@media screen and (min-width: 1005px){
+  .modal-description-text-desktop{
+    overflow: auto;
+    max-height: 100%;
+  }
+}
+
+@media screen and (max-width: 674px){
+  .modal-image{
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media screen and (min-width:674px) and (max-width:694px) {
+  button.modal-button {
+    font-size: .7rem;
+  }
+}
+
+button {
+  cursor: pointer;
+}
