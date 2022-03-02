@@ -416,6 +416,7 @@ form > * {
   justify-content: stretch;
   background: url(../img/card-background.png);
   width: 327px;
+  cursor: pointer;
 }
 
 .card1 {
