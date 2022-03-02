@@ -117,13 +117,28 @@ function addTitleDivTags(obj, element) {
   }
 }
 
+function addModalTags(obj, element) {
+  if (obj.technologies !== null) {
+    const tagList = document.createElement('ul');
+    const technologiesArray = Array.from(obj.technologies);
+    for (let i = 0; i < technologiesArray.length; i += 1) {
+      const listItem = document.createElement('li');
+      const tag = document.createElement('div');
+      tag.textContent += technologiesArray[i];
+      listItem.appendChild(tag);
+      tagList.appendChild(listItem);
+    }
+    element.appendChild(tagList);
+  }
+}
+
 function addButtons(obj, element) {
   if (obj.button !== null) {
     const button = document.createElement('button');
     const seeProject = document.createElement('span');
     seeProject.textContent += 'See Project';
     button.setAttribute('type', 'button');
-    button.classList.add('see-project', 'card-button');
+    button.classList.add('see-project', 'card-button', 'open-modal');
     button.appendChild(seeProject);
     element.appendChild(button);
   }
@@ -132,6 +147,7 @@ function addButtons(obj, element) {
 // code that controles the different mobile-nav dropdown functionality
 
 let menuExpanded = false;
+let modalBuilt = false;
 
 function transformClose() {
   barTop.classList.toggle('change');
@@ -265,3 +281,104 @@ function drawCards(cardArray, section) {
 }
 
 drawCards(cardArray, cardContainer);
+
+const cardclick = document.querySelectorAll('.card');
+const modalLinks = document.querySelectorAll('.card-button');
+const modal = document.querySelector('#modal-backdrop');
+
+let backdropsample = document.querySelector('#modal-backdrop1');
+
+const modalObj = {
+  mHeading: 'Multi-Post Stories', dHeading: 'Keeping track of hundreds of components website', technologies: ['HTML', 'Bootstrap', 'Ruby on rails'], imgSource: './img/modal-img.svg', modalDescription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.', buttonText: 'See project'
+
+}
+
+let globalModal;
+
+function buildModal(obj) {
+
+  let backdrop = document.createElement('div');
+  backdrop.setAttribute('id', 'modal-backdrop');
+  let modal = document.createElement('div');
+  modal.id = 'modal';
+  backdrop.classList.add('flex');
+  backdrop.appendChild(modal);
+  let closeIcon = document.createElement('div');
+  closeIcon.classList.add('modal-close');
+  modal.appendChild(closeIcon);
+  closeIcon.addEventListener('click', () => {
+    backdrop.classList.toggle('hidden');
+    backdrop.classList.toggle('flex');
+  });
+  let mobileHeading = document.createElement('h3');
+  let desktopHeading = document.createElement('h3');
+  mobileHeading.classList.add('mobile-modal-title');
+  mobileHeading.textContent = obj.mHeading;
+  modal.appendChild(mobileHeading);
+  desktopHeading.classList.add('desktop-modal-title')
+  desktopHeading.textContent = obj.dHeading;
+  modal.appendChild(desktopHeading);
+  const tags = document.createElement('div');
+  tags.classList.add('modal-tags');
+  addModalTags(modalObj, tags);
+  modal.appendChild(tags);
+  let modalDetails = document.createElement('div');
+  modalDetails.classList.add('modal-details');
+  modal.appendChild(modalDetails);
+  const modalImg = document.createElement('img');
+  modalImg.src = obj.imgSource;
+  modalImg.classList.add('modal-image');
+  modalDetails.appendChild(modalImg);
+  const modalDescription = document.createElement('div');
+  modalDescription.classList.add('modal-description');
+  modalDetails.appendChild(modalDescription);
+  const description = document.createElement('p');
+  description.textContent = obj.modalDescription;
+  description.classList.add('modal-description-text-desktop')
+  modalDescription.appendChild(description);
+  // buttons
+  const demoButton = document.createElement('button');
+  demoButton.type = 'button';
+  demoButton.classList.add('see-project', 'modal-button', 'source-button');
+  demoButton.textContent = 'See project';
+  const demoIcon = document.createElement('div');
+  demoIcon.classList.add('demo-icon');
+  demoButton.appendChild(demoIcon);
+  // source
+  const sourceButton = document.createElement('button');
+  sourceButton.type = 'button';
+  sourceButton.classList.add('see-project', 'modal-button');
+  sourceButton.textContent = 'See project';
+  const sourceIcon = document.createElement('div');
+  sourceIcon.classList.add('source-icon')
+  sourceButton.appendChild(sourceIcon);
+
+  //apend buttons
+  modalDescription.appendChild(demoButton);
+  modalDescription.appendChild(sourceButton);
+
+  document.body.insertBefore(backdrop, backdropsample);
+  const modalLocation = window.scrollY + backdrop.getBoundingClientRect().top;
+  // window.scrollTo(0, modalLocation);
+}
+
+cardclick.forEach((link) => {
+  link.addEventListener('click', () => {
+    console.log(link);
+    buildModal(modalObj);
+    console.log('sup');
+  })
+})
+
+modalLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    console.log(link);
+    buildModal(modalObj);
+    console.log('sup');
+  })
+})
+
+// cardclick.addEventListener('click', () => {
+//   buildModal(modalObj)
+//   console.log('sup');
+// })
