@@ -20,6 +20,21 @@ body {
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+button {
+  cursor: pointer;
+}
+
+p::-webkit-scrollbar {
+  background-color: #e4e4e4;
+  border-radius: 100px;
+  box-shadow: inset 0 0 5px grey;
+}
+
+p::-webkit-scrollbar-thumb {
+  background-color: #685c5c;
+  border-radius: 100px;
+}
+
 .logo {
   font-family: 'Inter', sans-serif;
   text-decoration: none;
@@ -124,7 +139,7 @@ header {
   }
 
   button.modal-button {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 
   .modal-description-text-desktop {
@@ -137,12 +152,11 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 1rem;
     margin: 0 auto;
   }
 
   .modal-button {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -191,9 +205,9 @@ header {
     font-weight: 500;
   }
 
-  @media screen and (max-width: 786px){
-    button.modal-button{
-      font-size: .8rem;
+  @media screen and (max-width: 786px) {
+    button.modal-button {
+      font-size: 0.8rem;
     }
   }
 
@@ -201,7 +215,7 @@ header {
     display: flex;
     flex-direction: row;
     margin-top: 1rem;
-    gap: 30px
+    gap: 30px;
   }
 }
 
@@ -287,6 +301,16 @@ header {
   list-style: none;
   border: 1px solid #8993a4;
   font-size: 15px;
+  margin: 0 12px 0 0;
+  padding: 10px 10px 10px 12px;
+}
+
+.modal-tags li {
+  font-family: 'Poppins', sans-serif;
+  list-style: none;
+  border: 1px solid #8993a4;
+  font-size: 13px;
+  font-weight: 600;
   margin: 0 12px 0 0;
   padding: 10px 10px 10px 12px;
 }
@@ -807,8 +831,7 @@ form button {
   height: 100vh;
   width: 100%;
   background: black;
-  background: rgba(0, 0, 0, .7);
-  z-index: 100%;
+  background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(6px);
 }
 
@@ -845,16 +868,6 @@ form button {
   margin: 0;
   padding: 0;
   display: flex;
-}
-
-.modal-tags li {
-  font-family: 'Poppins', sans-serif;
-  list-style: none;
-  border: 1px solid #8993a4;
-  font-size: 13px;
-  font-weight: 600;
-  margin: 0 12px 0 0;
-  padding: 10px 10px 10px 12px;
 }
 
 .modal-button {
@@ -902,37 +915,22 @@ form button {
   overflow-x: hidden;
 }
 
-p::-webkit-scrollbar {
-  background-color: #e4e4e4;
-  border-radius: 100px;
-  box-shadow: inset 0 0 5px grey;
-}
-
-p::-webkit-scrollbar-thumb {
-  background-color: #685c5c;
-  border-radius: 100px;
-}
-
-@media screen and (min-width: 1005px){
-  .modal-description-text-desktop{
+@media screen and (min-width: 1005px) {
+  .modal-description-text-desktop {
     overflow: auto;
     max-height: 100%;
   }
 }
 
-@media screen and (max-width: 674px){
-  .modal-image{
+@media screen and (max-width: 674px) {
+  .modal-image {
     width: 100%;
     max-width: 400px;
   }
 }
 
-@media screen and (min-width:674px) and (max-width:694px) {
+@media screen and (min-width: 674px) and (max-width: 694px) {
   button.modal-button {
-    font-size: .7rem;
+    font-size: 0.7rem;
   }
-}
-
-button {
-  cursor: pointer;
 }
