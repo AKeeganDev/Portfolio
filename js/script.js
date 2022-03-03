@@ -23,7 +23,14 @@ const card3 = {
 };
 
 const card4 = {
-  extraClasses: null, title: 'Professional Art Printing Data', description: 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard', featuredIMGURL: null, technologies: ['CSS', 'Bootsrap', 'Ruby'], demoURL: '#', linkToSource: '#', button: null,
+  extraClasses: null, 
+  title: 'Professional Art Printing Data', 
+  description: 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard', 
+  featuredIMGURL: null, 
+  technologies: ['CSS', 'Bootsrap', 'Ruby'], 
+  demoURL: '#', 
+  linkToSource: '#', 
+  button: null,
 };
 
 const card5 = {
@@ -283,7 +290,11 @@ const modalLinks = document.querySelector('.card-button');
 const backdropsample = document.querySelector('#modal-backdrop1');
 
 const modalObj = {
-  mHeading: 'Multi-Post Stories', dHeading: 'Keeping track of hundreds of components website', technologies: ['HTML', 'Bootstrap', 'Ruby on rails'], imgSource: './img/modal-img.svg', modalDescription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.', mobileDescription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent', buttonText: 'See project',
+  mHeading: 'Multi-Post Stories', 
+  dHeading: 'Keeping track of hundreds of components website', 
+  technologies: ['HTML', 'Bootstrap', 'Ruby on rails'], 
+  imgSource: './img/modal-img.svg', 
+  modalDescription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.', mobileDescription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent', buttonText: 'See project',
 };
 
 function buildModal(obj) {
@@ -404,6 +415,7 @@ form.addEventListener('submit', (event) => {
   }
 });
 
+//Local Storage
 const fullName = document.getElementById('full-name');
 const textArea = document.getElementById('details');
 
