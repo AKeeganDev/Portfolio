@@ -403,3 +403,40 @@ form.addEventListener('submit', (event) => {
     event.preventDefault();
   }
 });
+
+const fullName = document.getElementById('full-name');
+const textArea = document.getElementById('details');
+
+function applyInputs() {
+  if (localStorage.getItem('formData')) {
+    const formInput = JSON.parse(localStorage.getItem('formData'));
+    fullName.value = formInput[fullName.name];
+    email.value = formInput[email.name];
+    textArea.value = formInput[textArea.name];
+  }
+}
+
+applyInputs();
+
+const formData = {
+  'full-name': fullName.value,
+  email: email.value,
+  details: textArea.value,
+};
+
+function setInput(formElement) {
+  formData[formElement.name] = formElement.value;
+  localStorage.setItem('formData', JSON.stringify(formData));
+}
+
+fullName.addEventListener('input', () => {
+  setInput(fullName);
+});
+
+email.addEventListener('input', () => {
+  setInput(email);
+});
+
+textArea.addEventListener('input', () => {
+  setInput(textArea);
+});
