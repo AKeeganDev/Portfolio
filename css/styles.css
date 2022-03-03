@@ -964,13 +964,8 @@ form button {
   }
 }
 
-
-input:focus:invalid:required{
-  box-shadow: 0 0 5px 1px red;;
-}
-
-input:valid {
-  border: 10px solid lightgreen;
+input:focus:invalid:required {
+  box-shadow: 0 0 5px 1px red;
 }
 
 form input[type='email'] {
