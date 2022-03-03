@@ -283,31 +283,36 @@ const modalLinks = document.querySelector('.card-button');
 const backdropsample = document.querySelector('#modal-backdrop1');
 
 const modalObj = {
-  mHeading: 'Multi-Post Stories', dHeading: 'Keeping track of hundreds of components website', technologies: ['HTML', 'Bootstrap', 'Ruby on rails'], imgSource: './img/modal-img.svg', modalDescription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.', buttonText: 'See project',
+  mHeading: 'Multi-Post Stories', dHeading: 'Keeping track of hundreds of components website', technologies: ['HTML', 'Bootstrap', 'Ruby on rails'], imgSource: './img/modal-img.svg', modalDescription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.', mobileDescription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent', buttonText: 'See project',
 };
 
 function buildModal(obj) {
   const backdrop = document.createElement('div');
   backdrop.setAttribute('id', 'modal-backdrop');
+  // created backdrop
   const modal = document.createElement('div');
   modal.id = 'modal';
   backdrop.classList.add('flex');
   backdrop.appendChild(modal);
-  const closeIcon = document.createElement('div');
-  closeIcon.classList.add('modal-close');
-  modal.appendChild(closeIcon);
-  closeIcon.addEventListener('click', () => {
-    backdrop.classList.toggle('hidden');
-    backdrop.classList.toggle('flex');
-  });
+  // add modal
+  const headingContainer = document.createElement('div');
   const mobileHeading = document.createElement('h3');
   const desktopHeading = document.createElement('h3');
   mobileHeading.classList.add('mobile-modal-title');
   mobileHeading.textContent = obj.mHeading;
-  modal.appendChild(mobileHeading);
+  headingContainer.appendChild(mobileHeading);
+  headingContainer.classList.add('modal-header');
+  headingContainer.appendChild(desktopHeading);
+  const closeIcon = document.createElement('div');
+  closeIcon.classList.add('modal-close');
+  headingContainer.appendChild(closeIcon);
+  closeIcon.addEventListener('click', () => {
+    backdrop.classList.toggle('hidden');
+    backdrop.classList.toggle('flex');
+  });
   desktopHeading.classList.add('desktop-modal-title');
   desktopHeading.textContent = obj.dHeading;
-  modal.appendChild(desktopHeading);
+  modal.appendChild(headingContainer);
   const tags = document.createElement('div');
   tags.classList.add('modal-tags');
   addModalTags(modalObj, tags);
@@ -325,7 +330,13 @@ function buildModal(obj) {
   const description = document.createElement('p');
   description.textContent = obj.modalDescription;
   description.classList.add('modal-description-text-desktop');
+  description.classList.add('desktop-modal-text');
   modalDescription.appendChild(description);
+  const mobiletext = document.createElement('p');
+  mobiletext.textContent = obj.mobileDescription;
+  mobiletext.classList.add('mobile-modal-text');
+  mobiletext.classList.add('modal-description-text-desktop');
+  modalDescription.appendChild(mobiletext);
   const demoButton = document.createElement('button');
   demoButton.type = 'button';
   demoButton.classList.add('see-project', 'modal-button', 'source-button');
