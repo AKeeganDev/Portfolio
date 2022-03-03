@@ -697,7 +697,7 @@ textarea::placeholder {
 }
 
 #full-name,
-#email {
+#mail {
   font-size: 15px;
   font-family: Inter, sans-serif;
   padding: 14px;
@@ -962,4 +962,17 @@ form button {
   button.modal-button {
     font-size: 0.7rem;
   }
+}
+
+
+input:focus:invalid:required{
+  box-shadow: 0 0 5px 1px red;;
+}
+
+input:valid {
+  border: 10px solid lightgreen;
+}
+
+form input[type='email'] {
+  text-transform: lowercase;
 }
