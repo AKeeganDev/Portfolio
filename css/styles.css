@@ -741,6 +741,13 @@ form button {
     max-width: 1156px;
   }
 
+  .modal-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
+
   .greeting-text-container p {
     font-size: 20px;
   }

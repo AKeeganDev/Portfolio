@@ -337,6 +337,8 @@ function buildModal(obj) {
   mobiletext.classList.add('mobile-modal-text');
   mobiletext.classList.add('modal-description-text-desktop');
   modalDescription.appendChild(mobiletext);
+  const buttonHolder = document.createElement('div');
+  buttonHolder.classList.add('flex');
   const demoButton = document.createElement('button');
   demoButton.type = 'button';
   demoButton.classList.add('see-project', 'modal-button', 'source-button');
@@ -352,8 +354,10 @@ function buildModal(obj) {
   sourceIcon.classList.add('source-icon');
   sourceButton.appendChild(sourceIcon);
 
-  modalDescription.appendChild(demoButton);
-  modalDescription.appendChild(sourceButton);
+  buttonHolder.appendChild(demoButton);
+  buttonHolder.appendChild(sourceButton);
+
+  modalDescription.appendChild(buttonHolder);
 
   document.body.insertBefore(backdrop, backdropsample);
 }
