@@ -11,7 +11,7 @@ const portfolio = document.querySelector('#portfolio');
 // Card objects for array
 
 const card1 = {
-  extraClasses: ['card1'], title: null, description: null, featuredIMGURL: null, technologies: null, demoURL: '#', linkToSource: '#', button: true,
+  extraClasses: ['card1'], title: null, description: null, featuredIMGURL: null, technologies: null, demoURL: 'https://akeegandev.github.io/To_Do_List/', linkToSource: '#', button: true,
 };
 
 const card2 = {
@@ -23,7 +23,7 @@ const card3 = {
 };
 
 const card4 = {
-  extraClasses: null,
+  extraClasses: [null],
   title: 'Professional Art Printing Data',
   description: 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard',
   featuredIMGURL: null,
@@ -376,8 +376,16 @@ function buildModal(obj) {
 }
 
 cardclick.forEach((link) => {
-  link.addEventListener('click', () => {
+  link.addEventListener('click', (e) => {
     buildModal(modalObj);
+    const demoButton = document.querySelector('.source-button');
+    cardArray.forEach((card) => {
+      if (card.extraClasses[0]) {
+        if (e.target.parentElement.classList.contains(card.extraClasses[0])) {
+          demoButton.setAttribute('onclick', `location.href="${card.demoURL}";`);
+        }
+      }
+    });
   });
 });
 
